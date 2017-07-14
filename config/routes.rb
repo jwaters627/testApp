@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   get '/friends', to: 'static_pages#friends'
   get '/signup', to: 'users#new'
  
-
+  resources :users
  
 end
