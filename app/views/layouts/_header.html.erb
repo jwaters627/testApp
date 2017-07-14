@@ -3,6 +3,7 @@
 		<%=link_to "HOME", root_path, :class => 'insideFlex' %>
 		<%=link_to "ABOUT", about_path, :class => 'insideFlex' %>
 		<%=link_to "PROFILE", help_path, :class => 'insideFlex' %>
-		<%=link_to "Friends", friends_path, :class => 'insideFlex' %>
+		<%= link_to "LOG IN", login_path, :class => 'insideFlex' %>
+        <%= link_to "LOG OUT", logout_path, method: :delete, :class => 'insideFlex' %>
 	</div>
 </header>
