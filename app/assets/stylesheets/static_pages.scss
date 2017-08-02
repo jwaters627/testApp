@@ -1,9 +1,64 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
 body{
 	margin: 0;
 	padding: 0;
+
+	.navbar{
+		display: block;
+		height: 56px;
+
+		.navbar-nav{
+			line-height: 56px;
+			margin-top: 4px;
+
+			li{
+				a{
+					color: #fff;
+				}
+			}
+
+			.dropdown-menu{
+				li{
+					a{
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+
+	.homeTitle{
+		text-align: center;
+	}
+
+	.homeDescription{
+		width: 50%;
+		margin-left: 25%;
+		text-align: center;
+	}
+
+	.signup-button{
+		text-align: center;
+		display: block;
+		width: 140px;
+		margin: 16px auto;
+	}
+
+	#navTitle{
+		font-family: open-sans;
+		font-size: 18px;
+		line-height: 56px;
+		display: inline-block;
+		float: left;
+		color: #fff;
+	}
 }
 
 .flexContainerTest{
