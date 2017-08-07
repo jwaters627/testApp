@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_and_belongs_to_many :lists, dependent: :destroy
 	attr_accessor :remember_token
 
 	# the self is optional here because it is inside the User model, so email = email.downcase is the same thing
@@ -29,8 +30,8 @@ class User < ApplicationRecord
 	    update_attribute(:remember_digest, User.digest(remember_token))
   	end
 
-  	def authenticated?(remember_token)
-  		return false if remember_digest.nil?
+  	def authenticated?(remember_token)return false if remember_digest.nil?
+  		
     	BCrypt::Password.new(remember_digest).is_password?(remember_token)
   	end
 

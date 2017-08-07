@@ -1,0 +1,13 @@
+
+<% provide(:button_text, 'Add Item') %>
+
+<h1><%= @list.name %> </h1>
+	<%=link_to "Share", shareList_path(:id => @list.id) %>
+	<ul class="lists">
+	<% @items.each do |item| %>
+	  <li><%= item.name %></li>
+	  <%=link_to "X", deleteItem_path(:id => item.id), method: :delete %>
+	<% end %>
+	</ul>
+
+<%= render 'item_form' %>

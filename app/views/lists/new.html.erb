@@ -1,0 +1,12 @@
+<% provide(:title, 'New List') %>
+
+
+
+<%= form_for(@list) do |f| %>
+  
+  <%= f.text_field :name, class: 'itemAdd', value: '' %>
+
+  <%= f.submit 'Create List', class: "btn btn-primary" %>
+
+<% end %>
+
