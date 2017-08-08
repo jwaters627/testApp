@@ -54,7 +54,7 @@ body{
 
 		li{
 			list-style: none;
-			width: 260px;
+			width: 300px;
 		}
 	}
 
@@ -63,11 +63,11 @@ body{
 		color: #000;
 		font-size: 30px;
 		display: inline-block;
+		max-width: 200px;
 	}
 
 	.deleteButton{
 		display: inline-block;
-		margin-left: 24px;
 		color: #fff;
 		background-color: #b9311b;
 		font-weight: 500;
