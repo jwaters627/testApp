@@ -1,8 +1,10 @@
 
 <% provide(:button_text, 'Add Item') %>
 
-<h1 ><%= @list.name %> </h1>
-	<%=link_to "Share", shareList_path(:id => @list.id), class: 'buttonText' %>
+	<div class='listNameContainer'>
+		<h1 class='listName'><%= @list.name %> </h1>
+		<%=link_to "Share", shareList_path(:id => @list.id), class: 'buttonText' %>
+	</div>
 	<ul class="lists">
 	<% @items.each do |item| %>
 	  <li>
