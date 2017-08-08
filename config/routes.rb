@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete '/deleteItem', to: 'items#destroy'
   delete '/deleteList', to: 'lists#destroy'
   get '/shareList', to: 'lists#share'
+  get '/addList', to: 'lists#add'
  
   resources :users
   resources :lists

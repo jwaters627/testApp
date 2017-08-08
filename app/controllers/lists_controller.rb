@@ -38,8 +38,14 @@ class ListsController < ApplicationController
   	def share
   		@list = List.find(params[:id])
   		@users = User.all
-
+      
   	end
+
+    def add
+      @list = List.find(params[:id])
+      User.find(params[:userid]).lists << @list
+      redirect_to :back
+    end
 
 	def destroy
 		@list = List.find(params[:id])

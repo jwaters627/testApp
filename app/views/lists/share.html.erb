@@ -1,16 +1,6 @@
 <h1>Share</h1>
 
-<% @users.each do |user| %>
-		  <li class='shareList'>
-		  	<input type="checkbox" name="task_id" id=user.id value="18" />
-		  	<%= user.name %>
-		  </li> 
-<% end %>
 
-
-<%= form_for(@list) do |f| %>
 	<%=@users.each do |user|%>
-	<%= f.check_box :users, { multiple: true }, user.name %>
+	<%=link_to user.name, addList_path(:userid => user.id, :id => @list.id), method: :get %>
   <% end %>
-  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
-<% end %>
