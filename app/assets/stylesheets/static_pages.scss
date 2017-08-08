@@ -140,27 +140,155 @@ body{
 	}
 }
 
-.flexContainerTest{
-	background: deepskyblue;
-	list-style: none;
- 	margin: 0; 
-	display: flex;
-	justify-content: flex-start;
 
-	.insideFlex{
-	  text-decoration: none;
-	  display: block;
-	  padding: 1em;
-	  color: white;
-	  margin: 0;
-	  padding-left: 2em;
-	  padding-right: 2em; 
-	  text-decoration: none;
+@media (max-width: 600px) {
+	body{
+	margin: 0;
+	padding: 0;
 
-	  &:hover {
-	  	background: darken(deepskyblue, 2%);
-	  }
+	.navbar{
+		display: block;
+		height: 100px;
+
+		.navbar-nav{
+			line-height: 100px;
+			margin-top: 4px;
+
+			li{
+				a{
+					color: #fff;
+
+				}
+			}
+
+			.dropdown-menu{
+				li{
+					a{
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+
+	.userName{
+		font-family: 'Sedgwick Ave';
+		font-size: 60px;
+	}
+
+	.buttonText{
+		color: #fff;
+		background-color: #1a95e0;
+		display: inline-block;
+		padding: 20px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		border-radius: 4px;
+	}
+	.lists{
+
+		li{
+			list-style: none;
+			width: 400px;
+		}
+	}
+
+	.listTitle{
+		font-family: bookman;
+		color: #000;
+		font-size: 40px;
+		display: inline-block;
+		max-width: 300px;
+	}
+
+	.listNameContainer{
+		margin: 24px auto;
+		max-width: 400px;
+
+
+		.buttonText{
+			margin-left: 10px;
+			margin-top: -30px;
+			vertical-align: middle;
+		}
+
+		.listName{
+			font-family: 'Sedgwick Ave';
+			font-size: 60px;
+			display: inline-block;
+			margin-right: 20px;
+			margin-top: 0;
+		}
+	}
+
+	.deleteButton{
+		display: inline-block;
+		color: #fff;
+		background-color: #b9311b;
+		font-weight: 500;
+		display: inline-block;
+		padding: 24px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border-radius: 4px;
+		float: right;
+		margin-top: 10px;
+	}
+
+	.shareName{
+		font-family: bookman;
+		font-size: 34px;
+	}
+
+	.itemAdd{
+		width: 30%;
+	}
+
+	.homeTitle{
+		text-align: center;
 	}
 
 
+	.signup-button{
+		text-align: center;
+		font-size: 34px;
+		display: block;
+		width: 240px;
+		margin: 16px auto;
+	}
+
+	#navTitle{
+		font-family: open-sans;
+		font-size: 32px;
+		line-height: 56px;
+		display: inline-block;
+		float: left;
+		color: #fff;
+	}
+
+	.shareList{
+		list-style: none;
+	}
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
