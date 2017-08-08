@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
-@import "bootstrap";
+@import "bootstrap"; 
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Sedgwick+Ave");
 
 
 body{
@@ -20,6 +22,7 @@ body{
 			li{
 				a{
 					color: #fff;
+
 				}
 			}
 
@@ -31,6 +34,55 @@ body{
 				}
 			}
 		}
+	}
+
+	.userName{
+		font-family: 'Sedgwick Ave';
+		font-size: 44px;
+	}
+
+	.buttonText{
+		color: #fff;
+		background-color: #1a95e0;
+		display: inline-block;
+		padding: 14px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border-radius: 4px;
+	}
+	.lists{
+
+		li{
+			list-style: none;
+			width: 260px;
+		}
+	}
+
+	.listTitle{
+		font-family: bookman;
+		color: #000;
+		font-size: 30px;
+		display: inline-block;
+	}
+
+	.deleteButton{
+		display: inline-block;
+		margin-left: 24px;
+		color: #fff;
+		background-color: #b9311b;
+		font-weight: 500;
+		display: inline-block;
+		padding: 14px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+		border-radius: 4px;
+		float: right;
+		margin-top: 6px;
+	}
+
+	.shareName{
+		font-family: bookman;
+		font-size: 24px;
 	}
 
 	.itemAdd{

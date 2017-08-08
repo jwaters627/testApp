@@ -1,19 +1,19 @@
 
 <% provide(:title, @user.name) %>
 
-<h1>
-  <%= @user.name %>
+<h1 class='userName'><%= @user.name %></h1>
   <div class="col-md-8">
-  	<%=link_to "+ New List", newList_path(:id => @user.id) %>
+  	<%=link_to "New List", newList_path(:id => @user.id), class: 'buttonText' %>
     <% if @user.lists.any? %>
       <h3>lists (<%= @user.lists.count %>)</h3>
       <ul class="lists">
         <% @user.lists.each do |list| %>
-		  <li><%= link_to list.name, lists_path + '/' + list.id.to_s %></li>
-		  <%=link_to "X", deleteList_path(:id => list.id), method: :delete %>
+		  <li>
+        <%= link_to list.name, lists_path + '/' + list.id.to_s, class: 'listTitle' %>
+		    <%=link_to "DELETE", deleteList_path(:id => list.id), method: :delete, class: 'deleteButton' %>
+      </li>
 		<% end %>
       </ul>
       <%= will_paginate @lists %>
     <% end %>
   </div>
-</h1>

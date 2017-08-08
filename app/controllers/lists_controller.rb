@@ -24,28 +24,32 @@ class ListsController < ApplicationController
 
 	def edit
   		@list = List.find(params[:id])
-  	end
+	end
 
-  	def update
-    	@list = List.find(params[:id])
-    	@item = Item.new
-    	@item.name = list_params[:name]
-    	@item.list_id = params[:id]
-    	@item.save
-    	redirect_to :back
-  	end
+	def update
+  	@list = List.find(params[:id])
+  	@item = Item.new
+  	@item.name = list_params[:name]
+  	@item.list_id = params[:id]
+  	@item.save
+  	redirect_to :back
+	end
 
-  	def share
-  		@list = List.find(params[:id])
-  		@users = User.all
-      
-  	end
+	def share
+		@list = List.find(params[:id])
+		@people = User.all
+	end
 
-    def add
-      @list = List.find(params[:id])
+  def add
+    @list = List.find(params[:id])
+    if User.find(params[:userid]).lists.include? @list
+      redirect_to :back
+      return
+    else
       User.find(params[:userid]).lists << @list
       redirect_to :back
     end
+  end
 
 	def destroy
 		@list = List.find(params[:id])

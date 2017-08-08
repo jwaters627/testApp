@@ -1,12 +1,14 @@
 
 <% provide(:button_text, 'Add Item') %>
 
-<h1><%= @list.name %> </h1>
-	<%=link_to "Share", shareList_path(:id => @list.id) %>
+<h1 ><%= @list.name %> </h1>
+	<%=link_to "Share", shareList_path(:id => @list.id), class: 'buttonText' %>
 	<ul class="lists">
 	<% @items.each do |item| %>
-	  <li><%= item.name %></li>
-	  <%=link_to "X", deleteItem_path(:id => item.id), method: :delete %>
+	  <li>
+	  	<p  class='listTitle'><%= item.name %></p>
+	  	<%=link_to "DELETE", deleteItem_path(:id => item.id), method: :delete, class: 'deleteButton' %>
+	  </li>
 	<% end %>
 	</ul>
 

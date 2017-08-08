@@ -1,6 +1,10 @@
 <h1>Share</h1>
 
 
-	<%=@users.each do |user|%>
-	<%=link_to user.name, addList_path(:userid => user.id, :id => @list.id), method: :get %>
-  <% end %>
+<ul class="lists">
+	<% @people.each do |user|%>
+	  <li>
+	  	<%= link_to user.name, addList_path(:userid => user.id, :id => @list.id), class: 'shareName' %>
+	  </li>
+	<% end %>
+</ul>
